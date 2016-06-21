@@ -1,0 +1,9 @@
+Makefile
+*.log
+*.res
+*.trs
+*.deps
+*.dirstamp
+*.la
+*.pc
+libtool
