@@ -10,11 +10,15 @@ repository = "https://github.com/maidsafe/sodiumoxide_extras"
 version = "0.1.0"
 
 [dependencies]
-clippy = {version = "~0.0.76", optional = true}
+clippy = {version = "~0.0.80", optional = true}
 lazy_static = "~0.2.1"
 libc = "~0.2.12"
 rand = "~0.3.14"
+sodiumoxide = {git = "https://github.com/Fraser999/sodiumoxide", branch = "serialise", version = "~0.0.12", optional = true}
 unwrap = "~1.1.0"
 
 [dev-dependencies]
-sodiumoxide = "~0.0.10"
+sodiumoxide = {git = "https://github.com/Fraser999/sodiumoxide", branch = "serialise", version = "~0.0.12"}
+
+[features]
+default = ["sodiumoxide/get-libsodium", "sodiumoxide/use-rustc-serialize"]
